@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 256" width="1000" height="256" role="img" aria-label="Currently learning: Kubernetes and Helm, Go, AI agents in delivery pipelines">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#070b16"/><stop offset="1" stop-color="#0d1530"/></linearGradient></defs><rect width="1000" height="256" rx="18" fill="url(#bg)"/><rect x="0.5" y="0.5" width="999" height="255" rx="18" fill="none" stroke="#1f2b4d"/>
+<rect x="0.5" y="0.5" width="999" height="40" rx="18" fill="#0b1226"/><rect x="0.5" y="22" width="999" height="19" fill="#0b1226"/>
+<line x1="0" y1="41" x2="1000" y2="41" stroke="#1f2b4d"/>
+<circle cx="26" cy="21" r="6" fill="#f87171"/><circle cx="46" cy="21" r="6" fill="#fbbf24"/><circle cx="66" cy="21" r="6" fill="#34d399"/>
+<text x="500" y="26" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="12.5" fill="#64748b">learning.log — mohannad@cairo</text>
+<g font-family="'Cascadia Code', 'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="14">
+<text x="40" y="66" fill="#22d3ee">$ tail -f learning.log</text>
+<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.500;1" dur="0.60s" fill="freeze"/>
+  <text x="40" y="84" fill="#475569">[01]</text>
+  <text x="84" y="84" fill="#34d399" font-weight="600">kubernetes + helm</text>
+  <text x="270" y="84" fill="#94a3b8">moving a 20-service docker compose platform onto k8s</text>
+  <rect x="854.4" y="69" width="105.6" height="21" rx="10.5" fill="none" stroke="#34d399" stroke-opacity="0.6"/>
+  <text x="907.2" y="84" text-anchor="middle" font-size="12" fill="#34d399">in progress</text>
+</g><g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.684;1" dur="0.95s" fill="freeze"/>
+  <text x="40" y="124" fill="#475569">[02]</text>
+  <text x="84" y="124" fill="#22d3ee" font-weight="600">go</text>
+  <text x="270" y="124" fill="#94a3b8">small services and CLI tools</text>
+  <rect x="877.2" y="109" width="82.8" height="21" rx="10.5" fill="none" stroke="#22d3ee" stroke-opacity="0.6"/>
+  <text x="918.6" y="124" text-anchor="middle" font-size="12" fill="#22d3ee">building</text>
+</g><g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.769;1" dur="1.30s" fill="freeze"/>
+  <text x="40" y="164" fill="#475569">[03]</text>
+  <text x="84" y="164" fill="#a78bfa" font-weight="600">ai in delivery</text>
+  <text x="270" y="164" fill="#94a3b8">agents that review PRs, watch deploys and propose fixes</text>
+  <rect x="900" y="149" width="60" height="21" rx="10.5" fill="none" stroke="#a78bfa" stroke-opacity="0.6"/>
+  <text x="930" y="164" text-anchor="middle" font-size="12" fill="#a78bfa">daily</text>
+</g>
+<text x="40" y="224" fill="#22d3ee">$</text>
+<rect x="56" y="211" width="9" height="17" fill="#22d3ee"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></rect>
+</g></svg>

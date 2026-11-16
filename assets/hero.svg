@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340" role="img" aria-label="Mohannad Ragab, Full Stack Developer and DevOps Engineer, with an animated service mesh">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b16"/>
+      <stop offset="1" stop-color="#0d1530"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e2a4a"/>
+    </pattern>
+    <clipPath id="card"><rect width="1000" height="340" rx="18"/></clipPath>
+
+    <!-- mesh edges, reused by the packets -->
+    <path id="e-in-gw" d="M575 170 L655 170"/>
+    <path id="e-gw-id" d="M655 170 L765 72"/>
+    <path id="e-gw-mt" d="M655 170 L795 135"/>
+    <path id="e-gw-wf" d="M655 170 L795 208"/>
+    <path id="e-gw-md" d="M655 170 L765 272"/>
+    <path id="e-id-sql" d="M765 72 L905 98"/>
+    <path id="e-wf-sql" d="M795 208 L905 98"/>
+    <path id="e-mt-mq" d="M795 135 L925 172"/>
+    <path id="e-wf-mq" d="M795 208 L925 172"/>
+    <path id="e-mt-s3" d="M795 135 L905 248"/>
+    <path id="e-md-s3" d="M765 272 L905 248"/>
+    <path id="e-mon-gw" d="M640 288 L655 170"/>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1000" height="340" fill="url(#bg)"/>
+    <rect width="1000" height="340" fill="url(#dots)"/>
+    <circle cx="760" cy="170" r="250" fill="url(#glow)"/>
+  </g>
+  <rect x="0.5" y="0.5" width="999" height="339" rx="18" fill="none" stroke="#1f2b4d"/>
+
+  <!-- left: who -->
+  <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Ubuntu, Helvetica, Arial, sans-serif">
+    <text x="52" y="78" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="14" fill="#22d3ee">~/mohannad · cairo, egypt</text>
+    <text x="50" y="138" font-size="50" font-weight="700" fill="#f1f5f9">Mohannad Ragab</text>
+    <text x="52" y="178" font-size="22" font-weight="600" fill="url(#title)">Full Stack Developer &amp; DevOps Engineer</text>
+    <text x="52" y="214" font-size="16" fill="#94a3b8">I build the product, then I run it in production.</text>
+    <text x="52" y="238" font-size="16" fill="#94a3b8">.NET · NestJS · React/Next.js · Docker · CI/CD · Nginx/TLS</text>
+
+    <g font-family="'Cascadia Code', 'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="13">
+      <rect x="52" y="262" width="236" height="32" rx="16" fill="#0b2a22" stroke="#14532d"/>
+      <circle cx="72" cy="278" r="5" fill="#34d399">
+        <animate attributeName="opacity" values="1;0.35;1" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="72" cy="278" r="5" fill="none" stroke="#34d399">
+        <animate attributeName="r" values="5;11" dur="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <text x="86" y="283" fill="#6ee7b7">all systems operational</text>
+    </g>
+  </g>
+
+  <!-- right: service mesh -->
+  <g fill="none" stroke-width="1.6" stroke-linecap="round">
+    <g stroke="#22d3ee" stroke-opacity="0.45" stroke-dasharray="4 7">
+      <use href="#e-in-gw"/><use href="#e-gw-id"/><use href="#e-gw-mt"/><use href="#e-gw-wf"/><use href="#e-gw-md"/>
+      <animate attributeName="stroke-dashoffset" from="22" to="0" dur="1.1s" repeatCount="indefinite"/>
+    </g>
+    <g stroke="#a78bfa" stroke-opacity="0.4" stroke-dasharray="4 7">
+      <use href="#e-id-sql"/><use href="#e-wf-sql"/><use href="#e-mt-mq"/><use href="#e-wf-mq"/><use href="#e-mt-s3"/><use href="#e-md-s3"/>
+      <animate attributeName="stroke-dashoffset" from="22" to="0" dur="1.4s" repeatCount="indefinite"/>
+    </g>
+    <g stroke="#f472b6" stroke-opacity="0.45" stroke-dasharray="2 6">
+      <use href="#e-mon-gw"/>
+      <animate attributeName="stroke-dashoffset" from="0" to="16" dur="1.6s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- packets travelling the mesh -->
+  <g>
+    <circle r="3.2" fill="#67e8f9"><animateMotion dur="1.2s" repeatCount="indefinite"><mpath href="#e-in-gw"/></animateMotion></circle>
+    <circle r="3.2" fill="#67e8f9"><animateMotion dur="1.8s" begin="0.2s" repeatCount="indefinite"><mpath href="#e-gw-id"/></animateMotion></circle>
+    <circle r="3.2" fill="#67e8f9"><animateMotion dur="1.6s" begin="0.6s" repeatCount="indefinite"><mpath href="#e-gw-mt"/></animateMotion></circle>
+    <circle r="3.2" fill="#67e8f9"><animateMotion dur="1.7s" begin="0.9s" repeatCount="indefinite"><mpath href="#e-gw-wf"/></animateMotion></circle>
+    <circle r="3.2" fill="#67e8f9"><animateMotion dur="1.9s" begin="0.4s" repeatCount="indefinite"><mpath href="#e-gw-md"/></animateMotion></circle>
+    <circle r="3" fill="#c4b5fd"><animateMotion dur="2.1s" begin="0.3s" repeatCount="indefinite"><mpath href="#e-id-sql"/></animateMotion></circle>
+    <circle r="3" fill="#c4b5fd"><animateMotion dur="2.3s" begin="1.1s" repeatCount="indefinite"><mpath href="#e-wf-sql"/></animateMotion></circle>
+    <circle r="3" fill="#c4b5fd"><animateMotion dur="1.9s" begin="0.7s" repeatCount="indefinite"><mpath href="#e-mt-mq"/></animateMotion></circle>
+    <circle r="3" fill="#c4b5fd"><animateMotion dur="2.0s" begin="1.4s" repeatCount="indefinite"><mpath href="#e-wf-mq"/></animateMotion></circle>
+    <circle r="3" fill="#c4b5fd"><animateMotion dur="2.4s" begin="0.5s" repeatCount="indefinite"><mpath href="#e-mt-s3"/></animateMotion></circle>
+    <circle r="3" fill="#c4b5fd"><animateMotion dur="2.2s" begin="1.6s" repeatCount="indefinite"><mpath href="#e-md-s3"/></animateMotion></circle>
+    <circle r="2.6" fill="#f9a8d4"><animateMotion dur="1.5s" begin="0.8s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e-mon-gw"/></animateMotion></circle>
+  </g>
+
+  <!-- nodes: core + pulsing ring + label -->
+  <g font-family="'Cascadia Code', 'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="11.5" text-anchor="middle">
+    <!-- ingress -->
+    <g>
+      <circle cx="575" cy="170" r="15" fill="none" stroke="#22d3ee"><animate attributeName="r" values="15;27" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="575" cy="170" r="15" fill="#082f3a" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="575" cy="170" r="5" fill="#22d3ee"/>
+      <text x="575" y="203" fill="#a5f3fc">nginx</text>
+    </g>
+    <!-- gateway -->
+    <g>
+      <circle cx="655" cy="170" r="17" fill="none" stroke="#22d3ee"><animate attributeName="r" values="17;30" dur="2.4s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2.4s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="655" cy="170" r="17" fill="#082f3a" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="655" cy="170" r="6" fill="#22d3ee"/>
+      <text x="655" y="148" fill="#a5f3fc">gateway</text>
+    </g>
+    <!-- services -->
+    <g>
+      <circle cx="765" cy="72" r="13" fill="none" stroke="#a78bfa"><animate attributeName="r" values="13;24" dur="2.8s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2.8s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="765" cy="72" r="13" fill="#1e1b3a" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="765" cy="72" r="4.5" fill="#a78bfa"/>
+      <text x="765" y="49" fill="#ddd6fe">identity</text>
+    </g>
+    <g>
+      <circle cx="795" cy="135" r="13" fill="none" stroke="#a78bfa"><animate attributeName="r" values="13;24" dur="2.8s" begin="1.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2.8s" begin="1.0s" repeatCount="indefinite"/></circle>
+      <circle cx="795" cy="135" r="13" fill="#1e1b3a" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="795" cy="135" r="4.5" fill="#a78bfa"/>
+      <text x="836" y="125" fill="#ddd6fe">meetings</text>
+    </g>
+    <g>
+      <circle cx="795" cy="208" r="13" fill="none" stroke="#a78bfa"><animate attributeName="r" values="13;24" dur="2.8s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2.8s" begin="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="795" cy="208" r="13" fill="#1e1b3a" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="795" cy="208" r="4.5" fill="#a78bfa"/>
+      <text x="836" y="230" fill="#ddd6fe">workflow</text>
+    </g>
+    <g>
+      <circle cx="765" cy="272" r="13" fill="none" stroke="#a78bfa"><animate attributeName="r" values="13;24" dur="2.8s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2.8s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="765" cy="272" r="13" fill="#1e1b3a" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="765" cy="272" r="4.5" fill="#a78bfa"/>
+      <text x="765" y="305" fill="#ddd6fe">media</text>
+    </g>
+    <!-- data layer -->
+    <g>
+      <circle cx="905" cy="98" r="14" fill="none" stroke="#fbbf24"><animate attributeName="r" values="14;25" dur="3.2s" begin="0.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="3.2s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <rect x="891" y="84" width="28" height="28" rx="7" fill="#2a2108" stroke="#fbbf24" stroke-width="2"/>
+      <text x="905" y="102" fill="#fde68a" font-size="10">sql</text>
+      <text x="905" y="72" fill="#fde68a">sql server</text>
+    </g>
+    <g>
+      <circle cx="925" cy="172" r="14" fill="none" stroke="#fbbf24"><animate attributeName="r" values="14;25" dur="3.2s" begin="1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="3.2s" begin="1.3s" repeatCount="indefinite"/></circle>
+      <rect x="911" y="158" width="28" height="28" rx="7" fill="#2a2108" stroke="#fbbf24" stroke-width="2"/>
+      <text x="925" y="176" fill="#fde68a" font-size="10">mq</text>
+      <text x="925" y="204" fill="#fde68a">rabbitmq</text>
+    </g>
+    <g>
+      <circle cx="905" cy="248" r="14" fill="none" stroke="#fbbf24"><animate attributeName="r" values="14;25" dur="3.2s" begin="2.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="3.2s" begin="2.1s" repeatCount="indefinite"/></circle>
+      <rect x="891" y="234" width="28" height="28" rx="7" fill="#2a2108" stroke="#fbbf24" stroke-width="2"/>
+      <text x="905" y="252" fill="#fde68a" font-size="10">s3</text>
+      <text x="905" y="280" fill="#fde68a">minio</text>
+    </g>
+    <!-- monitoring -->
+    <g>
+      <circle cx="640" cy="288" r="11" fill="none" stroke="#f472b6"><animate attributeName="r" values="11;20" dur="2s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="640" cy="288" r="11" fill="#33112a" stroke="#f472b6" stroke-width="2"/>
+      <circle cx="640" cy="288" r="3.5" fill="#f472b6"/>
+      <text x="640" y="318" fill="#fbcfe8">prometheus</text>
+    </g>
+  </g>
+</svg>
